@@ -6,6 +6,16 @@ class ListCustomerServices {
 
     return customers;
   }
+
+  async findById(id: string) {
+    const findCustomer = await prismaClient.customer.findFirst({
+      where: {
+        id: id,
+      },
+    });
+
+    return findCustomer;
+  }
 }
 
 export { ListCustomerServices };

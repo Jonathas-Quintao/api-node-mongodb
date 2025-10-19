@@ -22,3 +22,5 @@ class DeleteCustomerServices {
     return { STATUS_CODES: 200, message: "Deletado com sucesso" };
   }
 }
+
+export { DeleteCustomerServices };

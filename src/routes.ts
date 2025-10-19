@@ -34,8 +34,15 @@ export async function routes(
     }
   );
 
+  fastify.get(
+    "/customers/:id",
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      return new ListCustomerController().handleId(request, reply);
+    }
+  );
+
   fastify.delete(
-    "/customers",
+    "/customers/:id",
     async (request: FastifyRequest, reply: FastifyReply) => {
       return new DeleteCustomerController().handle(request, reply);
     }
