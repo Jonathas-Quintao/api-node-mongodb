@@ -1,8 +1,8 @@
 import { PrismaClient } from "@prisma/client";
 
 interface CustomerProps {
-  name: String;
-  email: String;
+  name: string;
+  email: string;
 }
 
 const prismaClient = new PrismaClient();
